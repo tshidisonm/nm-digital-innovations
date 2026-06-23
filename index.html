@@ -461,7 +461,22 @@
     .hero-buttons { display: flex; gap: 12px; margin-top: 32px; }
 
     /* ===== About ===== */
-    #about { background: var(--color-bg); }
+    #about {
+      background-color: var(--color-bg);
+      background-image: url('Backgrounds/nm_digital_About-us.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    #about::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--color-bg) 40%, transparent 80%);
+      pointer-events: none;
+    }
 
     .about-grid {
       display: grid;
@@ -1027,7 +1042,6 @@
           <p class="reveal reveal-delay-2">We believe great software starts with listening - understanding your unique challenges, workflows, and goals before writing a single line of code. Our collaborative approach ensures every solution we deliver is aligned with your vision and built to scale.</p>
           <p class="reveal reveal-delay-3"><strong>What sets us apart:</strong> We combine deep technical expertise with a genuine commitment to your success. Every project gets a dedicated team, transparent communication, and a relentless focus on quality.</p>
         </div>
-        
       </div>
     </div>
   </section>
